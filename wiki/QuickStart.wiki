@@ -1,6 +1,4 @@
-#summary One-sentence summary of this page.
-
-= Quick Start =
+#summary How to use NER package?
 
 - Command line shell interface to process the input text
 
@@ -32,4 +30,3 @@
 
   * output to HashMap
   HashMap<String, String> resultMap = nerResultSet.getMappedResult();
-
