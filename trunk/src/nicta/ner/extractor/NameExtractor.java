@@ -86,9 +86,9 @@ public class NameExtractor {
 	 */
 	public void process(String _text) {
 		// handling the illegal characters:
-		_text = _text.replace("ï¿½", "\"");
-		_text = _text.replace("ï¿½", "\"");
-		_text = _text.replace("ï¿½", "'");
+		_text = _text.replace("”", "\"");
+		_text = _text.replace("“", "\"");
+		_text = _text.replace("’", "'");
 		//_text = _text.replace("", "");
 		
 		// tokenization
@@ -293,6 +293,10 @@ public class NameExtractor {
 			if(!isFirstWord)
 				return true;
 			else {
+				// if the word is the first word in a sentence and
+				// ends with -ly (adv) -> consider it not a name
+				if(_text.endsWith("ly"))
+					return false;
 				// we need to deal with the first word in the sentence very carefully.
 				// as we can not tell if the first word is a name by detecting upper case characters.
 				String type_original = dict.checkup(_text);
