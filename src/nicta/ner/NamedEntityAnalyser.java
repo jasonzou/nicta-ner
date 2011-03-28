@@ -115,7 +115,7 @@ public class NamedEntityAnalyser {
 				System.out.print("Type in texts, -q for quit.\n> ");
 				processString = in.nextLine();
 				if(processString.equalsIgnoreCase("-q")) break;
-				System.out.println(nea.process(processString));
+				System.out.println(nea.process(processString).getMappedResult());
 			}
 		} else {
 			System.out.println(nea.process(ReadFileAsString(filename)));
