@@ -44,6 +44,7 @@ public class NERResultSet {
 	 */
 	public HashMap<String, String> getMappedResult() {
 		if(_result != null) return _result;
+		_result = new HashMap<String, String>();
 		for(ArrayList<Phrase> pa : phrases) {
 			for(Phrase p : pa) {
 				String ps = p.toString();
