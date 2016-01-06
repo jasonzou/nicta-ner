@@ -1,0 +1,1 @@
+NICTA Named Entity Recognizer is a java based Named Entity Recognizer which extracts named entities from text such as Organization, Location and Person names.
